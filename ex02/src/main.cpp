@@ -3,18 +3,21 @@
 //
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 #include <iostream>
 
 int main() {
-    ClapTrap clap1("ClapOne");
-    ClapTrap clap2("ClapTwo");
+    FragTrap frag1("FragOne");
+    FragTrap frag2("FragTwo");
 
-    clap1.attack(clap2.getName());
-    clap2.takeDamage(clap1.getAttackDamage());
-
-    clap2.beRepaired(5);
-    clap2.attack(clap1.getName());
-    clap1.takeDamage(clap2.getAttackDamage());
+    frag1.attack(frag2.getName());
+    frag2.takeDamage(frag1.getAttackDamage());
+    frag2.beRepaired(5);
+    frag2.attack(frag1.getName());
+    frag1.takeDamage(frag2.getAttackDamage());
+    frag1.highFivesGuys();
+    frag2.highFivesGuys();
 
     return 0;
 }

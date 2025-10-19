@@ -3,18 +3,26 @@
 //
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 
 int main() {
-    ClapTrap clap1("ClapOne");
-    ClapTrap clap2("ClapTwo");
+    ScavTrap scav1("ScavOne");
+    ScavTrap scav2("ScavTwo");
 
-    clap1.attack(clap2.getName());
-    clap2.takeDamage(clap1.getAttackDamage());
+    scav1.attack(scav2.getName());
+    scav2.takeDamage(scav1.getAttackDamage());
 
-    clap2.beRepaired(5);
-    clap2.attack(clap1.getName());
-    clap1.takeDamage(clap2.getAttackDamage());
+    scav2.beRepaired(5);
+    scav2.attack(scav1.getName());
+    scav1.takeDamage(scav2.getAttackDamage());
+
+    scav1.guardGate();
+    scav1.highFivesGuys();
+    scav2.highFivesGuys();
+    scav2.guardGate();
+    scav1.highFivesGuys();
+    scav2.highFivesGuys();
 
     return 0;
 }
