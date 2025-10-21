@@ -18,11 +18,6 @@ int main() {
     scav1.takeDamage(scav2.getAttackDamage());
 
     scav1.guardGate();
-    scav1.highFivesGuys();
-    scav2.highFivesGuys();
     scav2.guardGate();
-    scav1.highFivesGuys();
-    scav2.highFivesGuys();
-
     return 0;
 }

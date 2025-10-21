@@ -5,17 +5,18 @@
 #include "ScavTrap.hpp"
 #include <iostream>
 
+
 ScavTrap::ScavTrap() : ClapTrap("Default") {
-    hitPoints = scavHitPoints;
-    energyPoints = scavEnergyPoints;
-    attackDamage = scavAttackDamage;
+    hitPoints = 100;
+    energyPoints = 50;
+    attackDamage = 20;
     std::cout << "ScavTrap " << name << " created with default constructor." << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
-    hitPoints = scavHitPoints;
-    energyPoints = scavEnergyPoints;
-    attackDamage = scavAttackDamage;
+    hitPoints = 100;
+    energyPoints = 50;
+    attackDamage = 20;
     std::cout << "ScavTrap " << name << " created with parameterized constructor." << std::endl;
 }
 
@@ -46,24 +47,4 @@ void ScavTrap::attack(const std::string &target) {
 
 void ScavTrap::guardGate() {
     std::cout << "ScavTrap " << name << " is now in Gate Keeper mode." << std::endl;
-}
-
-void ScavTrap::highFivesGuys(void) {
-    std::cout << "ScavTrap " << name << " is requesting a high five!" << std::endl;
-}
-
-std::string ClapTrap::getName() const {
-    return name;
-}
-
-int ClapTrap::getHitPoints() const {
-    return hitPoints;
-}
-
-int ClapTrap::getEnergyPoints() const {
-    return energyPoints;
-}
-
-int ClapTrap::getAttackDamage() const {
-    return attackDamage;
 }

@@ -5,26 +5,20 @@
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
-
+#include "ClapTrap.hpp"
+#include <iostream>
 
 class FragTrap : public ClapTrap
 {
 	public:
-        FragTrap();
+        explicit FragTrap();
         FragTrap(const std::string &name);
         FragTrap(const FragTrap &other);
         FragTrap &operator=(const FragTrap &other);
-        ~FragTrap();
+        virtual ~FragTrap();
 
         void highFivesGuys(void);
         std::string getName() const;
-        int getHitPoints() const;
-        int getEnergyPoints() const;
-        int getAttackDamage() const;
-	private:
-        static const int fragHitPoints = 100;
-        static const int fragEnergyPoints = 100;
-        static const int fragAttackDamage = 30;
 };
 
 

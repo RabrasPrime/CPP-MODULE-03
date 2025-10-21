@@ -72,4 +72,3 @@ int ClapTrap::getEnergyPoints() const {
 int ClapTrap::getAttackDamage() const {
     return attackDamage;
 }
-

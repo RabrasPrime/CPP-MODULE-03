@@ -5,16 +5,16 @@
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap() : ClapTrap("Default") {
-    hitPoints = fragHitPoints;
-    energyPoints = fragEnergyPoints;
-    attackDamage = fragAttackDamage;
+    hitPoints = 100;
+    energyPoints = 100;
+    attackDamage = 50;
     std::cout << "FragTrap " << name << " created with default constructor." << std::endl;
 }
 
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
-    hitPoints = fragHitPoints;
-    energyPoints = fragEnergyPoints;
-    attackDamage = fragAttackDamage;
+    hitPoints = 100;
+    energyPoints = 100;
+    attackDamage = 50;
     std::cout << "FragTrap " << name << " created with parameterized constructor." << std::endl;
 }
 
@@ -35,21 +35,9 @@ FragTrap::~FragTrap() {
 }
 
 void FragTrap::highFivesGuys(void) {
-    std::cout << "FragTrap " << name << " is requesting a high five!" << std::endl;
+    std::cout << "FragTrap " << name << " requests a high five!" << std::endl;
 }
 
 std::string FragTrap::getName() const {
     return name;
-}
-
-int FragTrap::getHitPoints() const {
-    return hitPoints;
-}
-
-int FragTrap::getEnergyPoints() const {
-    return energyPoints;
-}
-
-int FragTrap::getAttackDamage() const {
-    return attackDamage;
 }
