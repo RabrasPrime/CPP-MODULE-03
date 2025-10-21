@@ -8,8 +8,7 @@
 #include "ClapTrap.hpp"
 #include <iostream>
 
-
-class ScavTrap: public ClapTrap {
+class ScavTrap: public virtual ClapTrap {
     public:
         ScavTrap();
         explicit ScavTrap(const std::string &name);

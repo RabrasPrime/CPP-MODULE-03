@@ -14,8 +14,8 @@ class ClapTrap {
         int energyPoints;
         int attackDamage;
     public:
-        explicit ClapTrap();
-        ClapTrap(const std::string &name);
+        ClapTrap();
+        explicit ClapTrap(const std::string &name);
         ClapTrap(const ClapTrap &other);
         ClapTrap &operator=(const ClapTrap &other);
         virtual ~ClapTrap();
