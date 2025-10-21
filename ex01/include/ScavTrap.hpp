@@ -27,9 +27,6 @@ class ScavTrap: public ClapTrap {
         static const int scavHitPoints = 100;
         static const int scavEnergyPoints = 50;
         static const int scavAttackDamage = 20;
-
 };
-
-
 
 #endif //SCAVTRAP_HPP
