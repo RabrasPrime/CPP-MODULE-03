@@ -48,10 +48,6 @@ void ScavTrap::guardGate() {
     std::cout << "ScavTrap " << name << " is now in Gate Keeper mode." << std::endl;
 }
 
-void ScavTrap::highFivesGuys(void) {
-    std::cout << "ScavTrap " << name << " is requesting a high five!" << std::endl;
-}
-
 std::string ClapTrap::getName() const {
     return name;
 }

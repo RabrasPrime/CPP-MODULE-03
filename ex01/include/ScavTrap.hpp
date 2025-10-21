@@ -19,7 +19,6 @@ class ScavTrap: public ClapTrap {
 
         void attack(const std::string &target);
         void guardGate();
-		void highFivesGuys(void);
 		std::string getName() const;
 		int getHitPoints() const;
 		int getEnergyPoints() const;
